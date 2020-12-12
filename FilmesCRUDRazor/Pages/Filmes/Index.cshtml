@@ -22,16 +22,16 @@
                             <th class="text-center">
                                 @Html.DisplayNameFor(model => model.Filme[0].Titulo)
                             </th>
-                             <th class="text-center">
+                            <th class="text-center">
                                 @Html.DisplayNameFor(model => model.Filme[0].DataLancamento)
                             </th>
-                             <th class="text-center">
+                            <th class="text-center">
                                 @Html.DisplayNameFor(model => model.Filme[0].Genero)
                             </th>
-                             <th class="text-center">
+                            <th class="text-center">
                                 @Html.DisplayNameFor(model => model.Filme[0].Preco)
                             </th>
-                            <th>Ações</th>
+                            <th class="text-center">Ações</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -51,14 +51,34 @@
                                     @Html.DisplayFor(modelItem => item.Preco)
                                 </td>
                                 <td class="text-center">
-                                    <a class="btn btn-warning" asp-page="./Edit" asp-route-id="@item.FilmeId">Editar</a> |
-                                    <a class="btn btn-info" asp-page="./Details" asp-route-id="@item.FilmeId">Detalhes</a> |
+                                    <a class="btn btn-warning" asp-page="./Edit" asp-route-id="@item.FilmeId">Editar</a> 
+                                    <a class="btn btn-info" asp-page="./Details" asp-route-id="@item.FilmeId">Detalhes</a> 
                                     <a class="btn btn-danger" asp-page="./Delete" asp-route-id="@item.FilmeId">Excluir</a>
                                 </td>
                             </tr>
                         }
                     </tbody>
                 </table>
+                <div class="clearfix"> </div>
+                <ul class="pagination justify-content-end">
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
