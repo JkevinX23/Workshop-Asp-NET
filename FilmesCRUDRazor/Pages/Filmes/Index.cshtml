@@ -5,6 +5,9 @@
     ViewData["Title"] = "Index";
 }
 
+@{
+    Layout = "_Layout";
+}
 
 <div class="container">
     <div class="row">
@@ -15,6 +18,26 @@
                     <span>Adicionar Filme</span>
                 </a>
             </p>
+            <form>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label class="text-left">Gênero: </label>
+                        <select asp-for="FilmePorGenero" asp-items="Model.Generos" class="form-control">
+                            <option value="">Todos - Gêneros</option>
+                        </select>
+                    </div>
+                </div>
+                <br />
+                <div class="row">
+                    <div class="col-md-6">
+                        <label class="text-left">Título do filme</label>
+                        <input class="form-control" type="text" name="BuscaPorGeneroNome" />
+                        <br />
+                        <input class="btn btn-primary" type="submit" value="Filtrar" />
+                    </div>
+                </div>
+                <br />
+            </form>
             <div class="table-responsive">
                 <table class="table table-striped">
                     <thead>
@@ -51,8 +74,8 @@
                                     @Html.DisplayFor(modelItem => item.Preco)
                                 </td>
                                 <td class="text-center">
-                                    <a class="btn btn-warning" asp-page="./Edit" asp-route-id="@item.FilmeId">Editar</a> 
-                                    <a class="btn btn-info" asp-page="./Details" asp-route-id="@item.FilmeId">Detalhes</a> 
+                                    <a class="btn btn-warning" asp-page="./Edit" asp-route-id="@item.FilmeId">Editar</a>
+                                    <a class="btn btn-info" asp-page="./Details" asp-route-id="@item.FilmeId">Detalhes</a>
                                     <a class="btn btn-danger" asp-page="./Delete" asp-route-id="@item.FilmeId">Excluir</a>
                                 </td>
                             </tr>

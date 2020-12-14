@@ -15,10 +15,11 @@ namespace FilmesCRUDRazor.Models
 
 
         [Display(Name="Data de Lançamento")]
-        [DisplayFormat(DataFormatString="{0: dd/MM/yyyy}", ApplyFormatInEditMode=true)]
+        [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}")]
         [Required(ErrorMessage = "Data de lançamento é um campo obrigatório")]
 
         public DateTime DataLancamento { get; set; }
+        
          
         [Display(Name="Gênero")]
         [Required(ErrorMessage = "É obrigatório informar o gênero do filme")]
