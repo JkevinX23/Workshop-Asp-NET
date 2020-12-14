@@ -48,6 +48,7 @@ A aplicação constitui num CRUD (Create, Read, Update e Delete).
 Caso queira executar o projeto de maneira local, basta executar os comandos abaixo:
 
 ```
+> cd FilmesCRUDRazor 
 > dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
 > dotnet add package Microsoft.EntityFrameworkCore.Sqlite
 > dotnet restore
